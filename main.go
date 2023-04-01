@@ -69,9 +69,34 @@ func SelectForm(bentuk string) string {
 }
 
 func CalculateSquare(sisi float64) (float64, float64, string) {
-	return 0, 0, "" // TODO: replace this
+	
+	luas := 0.0
+	keliling := 0.0
+	message := ""
+
+	if sisi > 0 {
+		luas = sisi * sisi
+		keliling = 4 * sisi
+	} else {
+		message = "sisi harus lebih besar dari 0"
+	}
+
+	return luas, keliling, message // TODO: replace this
 }
 
 func CalculateRectangle(panjang, lebar float64) (float64, float64, string) {
-	return 0, 0, "" // TODO: replace this
+
+	luas := 0.0
+	keliling := 0.0
+	message := ""
+
+	if panjang > 0 && lebar > 0 {
+		luas = panjang * lebar
+		keliling = 2 * (panjang + lebar)
+	} else {
+		luas = 0
+		keliling = 0
+		message = "panjang dan lebar harus lebih besar dari 0"
+	}
+	return luas, keliling, message // TODO: replace this
 }

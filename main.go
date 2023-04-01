@@ -59,7 +59,11 @@ func SelectForm(bentuk string) string {
 
 	if bentuk == "persegi" {
 		isValid = "persegi"
-	} else if bentuk == "persegi-panjang"
+	} else if bentuk == "persegi-panjang" {
+		isValid = "persegi-panjang"
+	} else {
+		isValid = "Bentuk geometri tidak valid!"
+	}
 
 	return isValid // TODO: replace this
 }
